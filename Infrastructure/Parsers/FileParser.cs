@@ -14,5 +14,10 @@ namespace Infrastructure.Parsers
                 .Select(s => Convert.ToInt32(s))
                 .ToArray();
         }
+
+        public static String[] ReadAsStringArray(String path)
+        {
+            return File.ReadAllLines(path).ToArray();
+        }
     }
 }
